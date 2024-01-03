@@ -1,18 +1,20 @@
-import { StoreContext, StoreProvider } from 'context/store.context';
+import { StoreContext } from 'context/store.context';
 import { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import FloatingButton from 'components/FloatingButton';
 
-const Page = () => {
+const Employees = () => {
   const { user } = useContext(StoreContext);
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home {user}</Text>
+      <Text style={styles.title}>Employees</Text>
       <View style={styles.separator} />
+      <FloatingButton />
     </View>
   );
 };
 
-export default Page;
+export default Employees;
 
 const styles = StyleSheet.create({
   container: {
