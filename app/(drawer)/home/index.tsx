@@ -2,18 +2,15 @@ import { StoreContext } from 'context/store.context';
 import { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const Salary = () => {
+export default function Page() {
   const { user } = useContext(StoreContext);
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Salary</Text>
+      <Text style={styles.title}>Home {user}</Text>
       <View style={styles.separator} />
-      
     </View>
   );
-};
-
-export default Salary;
+}
 
 const styles = StyleSheet.create({
   container: {

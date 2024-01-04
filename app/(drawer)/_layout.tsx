@@ -1,10 +1,11 @@
 import { Ionicons } from '@expo/vector-icons';
+import { DrawerToggleButton } from '@react-navigation/drawer';
 import { Drawer } from 'expo-router/drawer';
 
 const DrawerLayout = () => (
-  <Drawer>
+  <Drawer screenOptions={{ headerShown: true }}>
     <Drawer.Screen
-      name="index"
+      name="home"
       options={{
         headerTitle: 'Home',
         drawerLabel: 'Home',
@@ -36,7 +37,6 @@ const DrawerLayout = () => (
       }}
     />
   </Drawer>
-  
 );
 
 export default DrawerLayout;
